@@ -23,6 +23,7 @@ class AuthController {
                 {
                     httpOnly: true,
                     sameSite: 'none',
+                    secure: true,
                     maxAge: process.env.REFRESH_TOKEN_COOKIE_MAX_AGE_DAY * 24 * 60 * 60 * 1000
                 }
             )
@@ -56,6 +57,7 @@ class AuthController {
                 user.refreshToken,
                 {
                     httpOnly: true,
+                    secure: true,
                     sameSite: 'none',
                     maxAge: process.env.REFRESH_TOKEN_COOKIE_MAX_AGE_DAY * 24 * 60 * 60 * 1000
                 }
