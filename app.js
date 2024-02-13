@@ -9,6 +9,7 @@ const errorMiddleware = require('./src/middlware/error-middleware');
 
 const app = express()
 
+app.set('trust proxy', 1)
 app.use(express.json())
 app.use(cookieParser())
 app.use(cors({
